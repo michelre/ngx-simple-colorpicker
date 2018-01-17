@@ -1,0 +1,79 @@
+.current-color {
+  position: relative;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.current-color::after {
+  position: absolute;
+  content: '\25BC';
+  font-size: 10px;
+  right: -10px;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.tooltip-container{
+  border: 1px solid #d0d0d0;
+  background: white;
+  max-width: 250px;
+  position: absolute;
+  z-index: 10;
+  top: 40px;
+  padding: 7px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px 0 #EDEDED;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+}
+
+.checkmark svg {
+  fill: #FFF;
+}
+
+input:focus {
+  outline: 0 !important;
+}
+
+.tooltip-container::after{
+  position: absolute;
+  content: '';
+  top: -7px;
+  z-index: 10;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  transform: rotate(-135deg);
+  border-right: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  box-shadow: 0 1px 4px 0 #EDEDED
+}
+
+.tooltip-container ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-container ul li{
+  cursor: pointer;
+  width: 65px;
+  height: 40px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  position: relative;
+}

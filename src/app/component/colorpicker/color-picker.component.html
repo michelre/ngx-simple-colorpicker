@@ -1,0 +1,10 @@
+<div class="current-color" (click)="onClickInputAction($event)" [style.background]="currentColor"></div>
+<div class="tooltip-container" *ngIf="isTooltipVisible" (click)="onClickTooltipContainerAction($event)">
+  <ul>
+    <li *ngFor="let color of colors" [style.background]="color" (click)="selectColorAction($event, color)">
+      <div *ngIf="color === currentColor" class="checkmark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+      </div>
+    </li>
+  </ul>
+</div>
