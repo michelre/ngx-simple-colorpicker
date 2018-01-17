@@ -36,15 +36,17 @@ import { ColorPickerModule } from 'ngx-simple-colorpicker';
 ## API
 
 ### Inputs
-|  @Input()  | Type   | Default   | Details |
-|---|---|---|---|---|
-| currentColor  | string  | '' |  The selected color |
-| colors | Array<string>  | []  |  Sample colors |
+
+| @Input() | Type | Default | Details |
+| -------- |---- |------- |------- |
+| currentColor |string | '' | The selected color |
+| colors | Array<string> | [] | Sample colors |
+
 
 ### Outputs
 
 |  @Output()  | Value | Details |
-|---|---|---|---|---|
+| --- | --- | --- |
 | selectColor| string | Emit when the user select a new color in the tooltip. The selected color is emitted |
 
 ## Development
