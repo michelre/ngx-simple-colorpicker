@@ -2,7 +2,7 @@
 # Ngx Simple Colorpicker
 
 ## Description
-This is a really simple colorpicker library
+This is a really simple colorpicker library for Angular 2+
 
 ![](https://imgur.com/0HfRMyS.png)
 
