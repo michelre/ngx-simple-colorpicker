@@ -1,27 +1,60 @@
-# NgxSimpleColorpicker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+# Ngx Simple Colorpicker
 
-## Development server
+## Description
+This is a really simple colorpicker library
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![](https://imgur.com/0HfRMyS.png)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm i ngx-simple-colorpicker
+```
 
-## Build
+## Usage
+### Load the library
+```
+import { ColorPickerModule } from 'ngx-simple-colorpicker';
+@NgModule({
+  ...
+  imports: [
+    ...
+    ColorPickerModule
+  ]
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Use it in your HTML
 
-## Running unit tests
+```
+<color-picker
+   [colors]="['#c62828', '#6a1b9a', '#283593', '#0277bd', '#00695c', '#558b2f', '#ef6c00', '#6d4c41', '#546e7a']"
+   (selectColor)="changeColorAction($event)"></color-picker>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## API
 
-## Running end-to-end tests
+### Inputs
+|  @Input()  | Type   | Default   | Details |
+|---|---|---|---|---|
+| currentColor  | string  | '' |  The selected color |
+| colors | Array<string>  | []  |  Sample colors |
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Outputs
 
-## Further help
+|  @Output()  | Value | Details |
+|---|---|---|---|---|
+| selectColor| string | Emit when the user select a new color in the tooltip. The selected color is emitted |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Development
+### Building the library
+```
+npm i
+npm start
+```
+
+### Library development
+```
+npm run packagr
+```
